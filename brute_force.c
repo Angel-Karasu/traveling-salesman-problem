@@ -1,23 +1,18 @@
-#include "globals.h"
+#include "utilities.h"
 
-void brute_force(int start) {
-    if (start > NB_CITIES-2) {
-        int d = calculate_distance();
-        if (d < min_path[0]) {
-            min_path[0] = d;
-            copy_path();
-        }
-    }
+void permute(int start) {
+    if (start > NB_CITIES-2) copy_path_to_min_path();
 
     for (int i = start; i < NB_CITIES-1; i++) {
-        int temp = path[start];
-        path[start] = path[i];
-        path[i] = temp;
-
-        brute_force(start+1);
-        
-        temp = path[start];
-        path[start] = path[i];
-        path[i] = temp;
+        swap_path(start, i);
+        permute(start+1);
+        swap_path(start, i);
     }
+}
+
+void brute_force() {
+    init_path();
+
+    permute(0);
+    show_min_path("Brute force");
 }

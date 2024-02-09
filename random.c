@@ -1,16 +1,15 @@
+#include <stdlib.h>
 #include <time.h>
 
-#include "globals.h"
+#include "utilities.h"
 
 void shuffle() {
+    init_path();
     srand(time(NULL));
 
-    for (int i=0; i<NB_CITIES-1; i++) {
-        int r = rand() % (NB_CITIES-1);
-        int temp = path[r];
-        path[r] = path[i];
-        path[i] = temp;
-    }
-    min_path[0] = calculate_distance();
-    copy_path();
+    for (int i=0; i<NB_CITIES-1; i++) swap_path(rand() % (NB_CITIES-1), i);
+    
+    copy_path_to_min_path();
+
+    show_min_path("Random");
 }
