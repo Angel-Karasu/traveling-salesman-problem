@@ -14,7 +14,7 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
   - **Brute force:** Time complexity = O((n-1)!)
 2. Approximation Algorithms:
   - **Random:** Time complexity = O(n)
-  - 
+    
 ## Usage
 
 If you want to test the project, clone this repository and compile it using the make file
