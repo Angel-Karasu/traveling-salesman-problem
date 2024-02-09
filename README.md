@@ -1,6 +1,6 @@
 # Traveling Salesman Problem (TSP)
 
-This is a simple project that uses various means to find the (pseudo-)optimal path. Between having the right path and a path with a reduced complexity.
+This is a simple project that uses various methods to find the (pseudo-)optimal path. Between having the right path and a path with a reduced complexity.
 
 ### Problem Description
 
