@@ -17,7 +17,7 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
   - **Random:** Shuffle the list of cities and return it as a probable solution, `time complexity = O(n)`
   - **Sorting:** Sort cities by distance from starting city, using merge sort, `time complexity = O(nlog(n))`
 
-`n := number of cities to travel (number total of cities - 1)`
+*n := number of cities to travel (number total of cities - 1)*
     
 ## Usage
 
