@@ -21,7 +21,7 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
     
 ## Usage
 
-If you want to test the project, clone this repository and compile it using the make file
+If you want to test the project, clone this repository and compile it using make command
 ```shell
 git clone https://github.com/Angel-Karasu/traveling-salesman-problem.git;
 cd traveling-salesman-problem;
