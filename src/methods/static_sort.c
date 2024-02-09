@@ -1,4 +1,4 @@
-#include "utilities.h"
+#include "../utilities.h"
 
 typedef struct {
     int x;

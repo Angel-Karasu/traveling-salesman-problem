@@ -1,4 +1,4 @@
-#include "utilities.h"
+#include "../utilities.h"
 
 void permute(int start) {
     if (start > NB_CITIES-2) copy_path_to_min_path();

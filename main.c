@@ -1,4 +1,4 @@
-#include "functions.h"
+#include "methods.h"
 #include "globals.h"
 
 /* Change values to those desired */

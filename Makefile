@@ -1,7 +1,7 @@
 CC = gcc
 EXEC = path
-SRC = $(wildcard *.c)
-OBJ = $(SRC:.c=.o)
+SRC=$(shell find . -name '*.c')
+OBJ=$(patsubst %.c, %.o, $(SRC))
 
 all : $(EXEC)
 
@@ -12,7 +12,7 @@ $(EXEC) : $(OBJ)
 	$(CC) -c $< -o $@
 
 clean :
-	rm -rf *.o
+	rm -rf $(OBJ)
 
 mrproper : clean
 	rm -rf $(EXEC)

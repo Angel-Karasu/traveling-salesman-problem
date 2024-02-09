@@ -1,4 +1,4 @@
-#include "globals.h"
+#include "../globals.h"
 
 void copy_path_to_min_path();
 

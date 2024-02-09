@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "globals.h"
+#include "../globals.h"
 
 int min_path[NB_CITIES];
 int path[NB_CITIES-1];
