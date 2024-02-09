@@ -10,10 +10,12 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
 - Constraints: Each city must be visited exactly once, and the tour must return to the starting city.
  
 ### Approaches
+*n := number of cities to travel (number total of cities - 1)*
 1. Exact Algorithms:
-  - **Brute force:** Time complexity = O((n-1)!)
+  - **Brute force:** Test all possibilties, *time complexity = O(n!)*
 2. Approximation Algorithms:
-  - **Random:** Time complexity = O(n)
+  - **Sorting:** Sort cities by distance from starting city, using merge sort, *time complexity = O(nlog(n))*
+  - **Random:** Shuffle the list of cities and return it as a probable solution, *time complexity = O(n)*
     
 ## Usage
 
