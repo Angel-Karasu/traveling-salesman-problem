@@ -25,8 +25,8 @@ If you want to test the project, clone this repository and compile it using make
 ```shell
 git clone https://github.com/Angel-Karasu/traveling-salesman-problem.git;
 cd traveling-salesman-problem;
-make all
-./path
+make all;
+./path;
 ```
   
 ## License
