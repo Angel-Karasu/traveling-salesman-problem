@@ -37,22 +37,16 @@ void show_min_path(char method[], int *path) {
     printf("%s : %dkm\n", city_names[starting_city], path[0]);
 }
 
-void reset_path() {
+void init_path() {
     min_path[0] = __INT_MAX__;
     for (int i = 0; i < NB_CITIES-1; i++) path[i] = i + (i >= starting_city);
 }
 
 int main() {
-    reset_path();
-
-    for (int i=0; i<NB_CITIES; i++) printf("%d ", path[i]);
+    init_path();
 
     brute_force(0);
     show_min_path("Brute force", min_path);
-    
-    reset_path();
-
-    for (int i=0; i<NB_CITIES; i++) printf("%d ", path[i]);
 
     shuffle();
     show_min_path("Random", min_path);
