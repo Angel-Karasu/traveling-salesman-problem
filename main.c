@@ -3,13 +3,13 @@
 
 /* Change values to those desired */
 int const starting_city = 1;
-char const *city_names[] = {"Nancy", "Metz", "Paris", "Reims", "Troyes"};
+char const *city_names[] = {"Armenia", "Bogota", "Cartagena", "Neiva", "San Agustin"}; 
 int const distance_cities[NB_CITIES][NB_CITIES] = {
-    {0, 55, 303, 188, 183},
-    {55, 0, 306, 176, 203},
-    {303, 306, 0, 142, 153},
-    {188, 176, 142, 0, 123},
-    {183, 203, 153, 123, 0}
+    {0, 177, 652, 184, 303},
+    {177, 0, 663, 230, 388},
+    {652, 663, 0, 831, 953},
+    {184, 230, 831, 0, 159},
+    {303, 388, 953, 159, 0}
 };
 /* Don't forget to modify the number of cities in `globals.h`*/
 

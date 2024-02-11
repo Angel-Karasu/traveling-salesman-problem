@@ -40,11 +40,7 @@ void static_sort() {
     
     merge_sort(array, 0, NB_CITIES-2);
     
-    min_path[0] = 0;
-    for(int i=0; i<NB_CITIES-1; i++) {
-        min_path[0] += array[i].y;
-        min_path[i+1] = array[i].x;
-    }
-
+    for(int i=0; i<NB_CITIES-1; i++)  path[i] = array[i].x;
+    copy_path_to_min_path();
     show_min_path("Static sort");
 }
