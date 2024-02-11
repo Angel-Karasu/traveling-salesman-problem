@@ -2,7 +2,7 @@
 #include "globals.h"
 
 /* Change values to those desired */
-int const starting_city = 2;
+int const starting_city = 1;
 char const *city_names[] = {"Nancy", "Metz", "Paris", "Reims", "Troyes"};
 int const distance_cities[NB_CITIES][NB_CITIES] = {
     {0, 55, 303, 188, 183},
@@ -15,7 +15,7 @@ int const distance_cities[NB_CITIES][NB_CITIES] = {
 
 int main() {
     brute_force();
-    greedy_distance();
+    greedy_distance_total();
     shuffle();
     static_sort();
 
