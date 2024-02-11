@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Wshadow -Wunreachable-code
+CFLAGS = -Wall -Wextra
 EXEC = path
 SRC=$(shell find . -name '*.c')
 OBJ=$(patsubst %.c, %.o, $(SRC))
