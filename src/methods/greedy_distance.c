@@ -3,5 +3,5 @@
 void greedy_distance() {
     init_path();
 
-    show_min_path("Brute force");
+    show_min_path("Greedy distance");
 }
