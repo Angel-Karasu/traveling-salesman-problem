@@ -23,7 +23,7 @@ void init_path() {
 void show_min_path(char method[]) {
     printf("%s : %s -> ", method, city_names[starting_city]);
     for (int i=1; i<NB_CITIES; i++) printf("%s -> ", city_names[min_path[i]]);
-    printf("%s : %dkm\n", city_names[starting_city], min_path[0]);
+    printf("%s : %d km\n", city_names[starting_city], min_path[0]);
 }
 
 void swap_path(int i, int j) {
