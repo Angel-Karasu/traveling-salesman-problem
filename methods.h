@@ -1,5 +1,7 @@
 void brute_force();
 
-void static_sort();
+void greedy_distance();
 
 void shuffle();
+
+void static_sort();
