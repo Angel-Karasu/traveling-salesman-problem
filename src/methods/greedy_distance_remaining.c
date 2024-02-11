@@ -6,7 +6,7 @@ void swap_couple(int i, int j, couple array[NB_CITIES-1]) {
     array[j] = temp;
 }
 
-void greedy_distance_total() {
+void greedy_distance_remaining() {
     init_path();
     
     couple array[NB_CITIES-1];
@@ -25,5 +25,5 @@ void greedy_distance_total() {
         for (int j=i+1; j<NB_CITIES-1; j++) array[j].y -= distance_cities[path[i]][array[j].x];
     }
     copy_path_to_min_path();
-    show_min_path("Greedy distance");
+    show_min_path("Greedy distance remaining");
 }
