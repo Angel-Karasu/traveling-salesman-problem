@@ -5,17 +5,12 @@
 int min_path[NB_CITIES];
 int path[NB_CITIES-1];
 
-int calculate_distance() {
-    int distance = distance_cities[starting_city][path[0]];
-    for (int i=0; i<NB_CITIES-2; i++) distance += distance_cities[path[i]][path[i+1]];
-
-    return distance + distance_cities[path[NB_CITIES-2]][starting_city];
-}
-
 void copy_path_to_min_path() {
-    int d = calculate_distance();
-    if (d < min_path[0]) {
-        min_path[0] = d;
+    int dist = distance_cities[starting_city][path[0]] + distance_cities[path[NB_CITIES-2]][starting_city];
+    for (int i=0; i<NB_CITIES-2; i++) dist += distance_cities[path[i]][path[i+1]];
+
+    if (dist < min_path[0]) {
+        min_path[0] = dist;
         for (int i=1; i<NB_CITIES; i++) min_path[i] = path[i-1];
     }
 }

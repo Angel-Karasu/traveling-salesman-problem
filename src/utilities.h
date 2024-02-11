@@ -1,5 +1,10 @@
 #include "../globals.h"
 
+typedef struct {
+    int x;
+    int y;
+} couple;
+
 void copy_path_to_min_path();
 
 void init_path();

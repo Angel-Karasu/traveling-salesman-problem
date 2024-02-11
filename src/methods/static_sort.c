@@ -1,10 +1,5 @@
 #include "../utilities.h"
 
-typedef struct {
-    int x;
-    int y;
-} couple;
-
 void merge(couple arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
