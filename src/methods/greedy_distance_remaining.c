@@ -11,7 +11,7 @@ void greedy_distance_remaining() {
     
     couple array[NB_CITIES-1];
     for (int i=0; i<NB_CITIES-1; i++) {
-        couple c = {path[i], 0};
+        couple c = {path[i], distance_cities[path[i]][starting_city]};
         for (int j=0; j<NB_CITIES-1; j++) c.y += distance_cities[path[i]][path[j]];
         array[i] = c;
     }

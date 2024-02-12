@@ -16,6 +16,7 @@ int const distance_cities[NB_CITIES][NB_CITIES] = {
 int main() {
     brute_force();
     greedy_distance_remaining();
+    greedy_proximity();
     shuffle();
     static_sort();
 
