@@ -9,7 +9,7 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
 - Given the city to start, a set of cities and the distances between them, find the optimal tour that minimizes the total distance traveled.
 - Constraints: Each city must be visited exactly once, and the tour must return to the starting city.
  
-### Approaches
+## Approaches
 
 1. Exact algorithms:
   - **Brute force:** Test all possibilties, `complexity = O(n*n!)`
