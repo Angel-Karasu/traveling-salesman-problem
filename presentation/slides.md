@@ -3,58 +3,56 @@ marp: true
 paginate: true
 theme: default
 class: lead
-backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 math: mathjax
 ---
 
-# **Le problème du voyageur de commerce**
+# **Traveling Salesman Problem**
 
-Entre une solution exacte et une complexité polynomial
+Between an exact solution and polynomial complexity
 
 ---
 
-# Sommaire
+# Table of contents
 
-- Présentation du problème
-- Quelques mots sur le problème
-- Algorithmes exactes
-  - Recherche exhaustive
-- Algorithmes polynomiales
-  - Glouton de la distance restante
-  - Glouton de la proximité
+- Presentation of the problem
+- A few words about the problem
+- Exact algorithms
+  - Brute force
+- Polynomial algorithms
+  - Greedy distance remaining
+  - Greedy proximity
   - Random
-  - Tri statique
-- Données utilisées
-- Résultats
+  - Static sorting
+- Data used
+- Results
 
 ---
 
-# Présentation du problème
+# Presentation of the problem
 
 ![bg left:40% 80%](./pablo.png)
 
-Voici Pablo
-Pablo veut savoir qu’elle est le meilleur chemin afin de faire proliférer son commerce
-de farine
+This is Pablo
+Pablo wants to know the best way to grow his flour business.
 
 ![bg right:40% 80%](https://www.goway.com/media/uploads/maps/latin_america/colombia/colombia.jpg)
 
 ---
 
-# Quelques mots sur le problème
+# A few words about the problem
 
-- C’est un problème qualifié de NP-Complet
-- Il appartient au groupe des problèmes d’optimisation
-- La difficulté est de trouver la meilleure solution en une complexité polynomiale
-- Le principe est de trouver le plus court circuit à parcourir entre n points en partant d’un point donné
+- This is a NP-Complete problem
+- It belongs to the group of optimization problems
+- The challenge is to find the best solution with polynomial complexity
+- The principle is to find the shortest circuit between n points, starting from a given point.
 
 ---
 
-# Recherche exhaustive
+# Brute force
 
-Description : Essaye chaque possibilité et calcule la distance, si elle est inférieure à la + courte distance déjà connue alors il définit ce chemin comme étant le + court
-Complexité : $O(n*n!)$
+Description : Tries each possibility and calculates the distance, if it is less than the shortest distance already known then it defines this path as the shortest.
+Complexity : $O(n*n!)$
 
 ```c
 void permute(int start) {
@@ -73,16 +71,16 @@ void brute_force() {
 
 ---
 
-# Glouton de la distance restante
+# Greedy distance remaining
 
-Description : Choisit la ville qui est + proche des villes restantes
-Complexité : $\sum_{i=1}^{n}\sum_{j=1}^{n}1 + \sum_{i=1}^{n}(1 +\sum_{j=i+1}^{n}2) \le 3n^{2} = O(n^{2})$
+Description : Choose the city closest to the remaining cities
+Complexity : $\sum_{i=1}^{n}\sum_{j=1}^{n}1 + \sum_{i=1}^{n}(1 +\sum_{j=i+1}^{n}2) \le 3n^{2} = O(n^{2})$
 
 ```c
 void greedy_distance_remaining() {
     init_path();
     couple array[NB_CITIES-1];
-    /* Calcul la distance la moyenne entre chaque villes*/
+    /* Calculate the distance between cities */
     
     for (int i=0; i<NB_CITIES-1; i++) {
         couple min = {i, __INT_MAX__};
@@ -98,10 +96,10 @@ void greedy_distance_remaining() {
 
 ---
 
-# Glouton de la proximité
+# Greedy proximity
 
-Description : Choisit la ville qui est + proche de celle actuelle
-Complexité : $\sum_{i=1}^{n}\sum_{j=i}^{n}1 \le n^{2} = O(n^{2})$
+Description : hoose the city closest to your current one
+Complexity : $\sum_{i=1}^{n}\sum_{j=i}^{n}1 \le n^{2} = O(n^{2})$
 
 ```c
 void greedy_proximity() {
@@ -125,8 +123,8 @@ void greedy_proximity() {
 
 # Random
 
-Description : Mélange la liste de ville et la renvoie, probabilités $\le \frac{n!}{2}$
-Complexité : $O(n)$
+Description : Shuffle the list of cities and return it as a probable solution, probability $\le \frac{n!}{2}$
+Complexity : $O(n)$
 
 ```c
 void shuffle() {
@@ -140,11 +138,10 @@ void shuffle() {
 
 ---
 
-# Tri statique
+# Static sorting
 
-Description :
-	Renvoi les villes triées par leur distance à la ville de départ
-Complexité : $O(n*log(n))$, le coût du tri 
+Description : Sort cities by distance from starting city, using merge sort
+Complexity : $O(n*log(n))$, cost of sorting
 
 
 ```c
@@ -163,7 +160,7 @@ void static_sort() {
 
 ---
 
-# Fonctions utiles
+# Useful functions
 
 ```c
 void copy_path_to_min_path() {
@@ -191,7 +188,7 @@ void swap_path(int i, int j) {
 
 ---
 
-# Données utilisées
+# Data used
 
 | | Armenia | Bogota | Cartagena | Neiva | San Agustin |
 | - | - | - | - | - | - |
@@ -203,13 +200,18 @@ void swap_path(int i, int j) {
 
 ---
 
-# Résultats
+# Results
 
-Il ne reste plus qu’à ce que Pablo choisisse la méthode qui lui convient le mieux
+All that remains is for Pablo to choose the method that suits him best
 
 ![bg left:40% 80%](./pablo.png)
 
-Recherche exhaustive : `Cartagena, Armenia, San Agustin, Neiva : 2007 km`
-Glouton de la distance restante : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
-Glouton de la proximité : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
-Tri statique : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
+Brute force : `Cartagena, Armenia, San Agustin, Neiva : 2007 km`
+Greedy distance remaining : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
+Greedy proximity : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
+Random : `random`
+Static sorting : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
+
+---
+
+Github : https://github.com/Angel-Karasu/traveling-salesman-problem
