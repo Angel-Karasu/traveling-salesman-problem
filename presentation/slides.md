@@ -123,7 +123,7 @@ void greedy_proximity() {
 
 # Random
 
-Description : Shuffle the list of cities and return it as a probable solution, probability $\le \frac{n!}{2}$
+Description : Shuffle the list of cities and return it as a probable solution, probability $\ge \frac{2}{n!}$
 Complexity : $O(n)$
 
 ```c
