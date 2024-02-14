@@ -18,7 +18,7 @@ Between an exact solution and polynomial complexity
 - Presentation of the problem
 - A few words about the problem
 - Exact algorithms
-  - Brute force
+  - Exhaustive search
 - Polynomial algorithms
   - Greedy distance remaining
   - Greedy proximity
@@ -49,7 +49,7 @@ Pablo wants to know the best way to grow his flour business.
 
 ---
 
-# Brute force
+# Exhaustive search
 
 Description : Tries each possibility and calculates the distance, if it is less than the shortest distance already known then it defines this path as the shortest.
 Complexity : $O(n*n!)$
@@ -63,7 +63,7 @@ void permute(int start) {
         swap_path(start, i);
     }
 }
-void brute_force() {
+void exhaustive_search() {
     init_path();
     permute(0);
 }
@@ -206,7 +206,7 @@ All that remains is for Pablo to choose the method that suits him best
 
 ![bg left:40% 80%](./pablo.png)
 
-Brute force : `Cartagena, Armenia, San Agustin, Neiva : 2007 km`
+Exhaustive search : `Cartagena, Armenia, San Agustin, Neiva : 2007 km`
 Greedy distance remaining : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
 Greedy proximity : `Armenia, Neiva, San Agustin, Cartagena : 2136 km`
 Random : `random`

@@ -14,7 +14,7 @@ int const distance_cities[NB_CITIES][NB_CITIES] = {
 /* Don't forget to modify the number of cities in `globals.h`*/
 
 int main() {
-    brute_force();
+    exhaustive_search();
     greedy_distance_remaining();
     greedy_proximity();
     shuffle();

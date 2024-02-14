@@ -1,4 +1,4 @@
-void brute_force();
+void exhaustive_search();
 
 void greedy_distance_remaining();
 

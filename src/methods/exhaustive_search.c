@@ -10,9 +10,9 @@ void permute(int start) {
     }
 }
 
-void brute_force() {
+void exhaustive_search() {
     init_path();
 
     permute(0);
-    show_min_path("Brute force");
+    show_min_path("Exhaustive search");
 }

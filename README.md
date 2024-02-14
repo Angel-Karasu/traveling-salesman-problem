@@ -12,7 +12,7 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
 ## Approaches
 
 1. Exact algorithms:
-  - **Brute force:** Test all possibilties, `complexity = O(n*n!)`
+  - **Exhaustive search:** Test all possibilties, `complexity = O(n*n!)`
 2. Approximate algorithms:
   - **Greedy distance remaining:** Choose the city closest to the remaining cities, `complexity = O(n²)`
   - **Greedy proximity:** Choose the city closest to your current one, `complexity = O(n²)`
