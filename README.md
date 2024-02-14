@@ -30,6 +30,12 @@ cd traveling-salesman-problem;
 make all;
 ./path;
 ```
+
+## To do
+
+- [ ] Optimized exhaustive search
+- [ ] Add more algorithms
+- [ ] Stylish the marp slides
   
 ## License
 
