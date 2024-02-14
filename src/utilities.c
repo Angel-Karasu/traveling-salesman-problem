@@ -7,7 +7,11 @@ int path[NB_CITIES-1];
 
 void copy_path_to_min_path() {
     int dist = distance_cities[starting_city][path[0]] + distance_cities[path[NB_CITIES-2]][starting_city];
-    for (int i=0; i<NB_CITIES-2; i++) dist += distance_cities[path[i]][path[i+1]];
+    int i = 0;
+    while (dist<min_path[0] && i<NB_CITIES-2) {
+        dist += distance_cities[path[i]][path[i+1]];
+        i++;
+    }
 
     if (dist < min_path[0]) {
         min_path[0] = dist;
