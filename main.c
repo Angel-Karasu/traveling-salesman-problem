@@ -1,8 +1,9 @@
+#include <stdio.h>
+
 #include "methods.h"
 #include "globals.h"
 
 /* Change values to those desired */
-int const starting_city = 1;
 char const *city_names[] = {"Armenia", "Bogota", "Cartagena", "Neiva", "San Agustin"}; 
 int const distance_cities[NB_CITIES][NB_CITIES] = {
     {0, 177, 652, 184, 303},
@@ -13,7 +14,21 @@ int const distance_cities[NB_CITIES][NB_CITIES] = {
 };
 /* Don't forget to modify the number of cities in `globals.h`*/
 
+int starting_city;
+void choose_city() {
+    do {
+        starting_city = 0;
+        printf("Cities :\n");
+        for (int i=0; i<NB_CITIES; i++) printf("  %d. %s\n", i, city_names[i]);
+        printf("Choose the city to start with number: ");
+        scanf("%d", &starting_city);
+    } while (starting_city < 0 || starting_city >= NB_CITIES);
+    printf("\nYou start in %s\n\n", city_names[starting_city]);
+}
+
 int main() {
+    choose_city();
+
     exhaustive_search();
     greedy_distance_remaining();
     greedy_proximity();
