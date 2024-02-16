@@ -11,7 +11,7 @@ int const distance_cities[NB_CITIES][NB_CITIES] = {
     {184, 230, 831, 0, 159},
     {303, 388, 953, 159, 0}
 };
-/* Don't forget to modify the number of cities in `globals.h`*/
+/* Don't forget to modify the number of cities in `src/globals.h`*/
 
 int starting_city;
 void choose_city() {
