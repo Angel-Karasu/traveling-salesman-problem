@@ -1,4 +1,4 @@
-#include "../utilities.h"
+#include "utilities.h"
 
 void merge(couple arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;

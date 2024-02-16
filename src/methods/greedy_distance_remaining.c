@@ -1,4 +1,4 @@
-#include "../utilities.h"
+#include "utilities.h"
 
 void swap_couple(int i, int j, couple array[NB_CITIES-1]) {
     couple temp = array[i];

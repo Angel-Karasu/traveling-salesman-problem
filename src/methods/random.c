@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "../utilities.h"
+#include "utilities.h"
 
 void shuffle() {
     init_path();

@@ -1,3 +1,5 @@
+void choose_city();
+
 void exhaustive_search();
 
 void greedy_distance_remaining();
