@@ -21,7 +21,7 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
 
 *n := number of cities to travel (number total of cities - 1)*
     
-## Usage
+## How to test
 
 If you want to test the project, clone this repository and compile it using make command
 ```shell
