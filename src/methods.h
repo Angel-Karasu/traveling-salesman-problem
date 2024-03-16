@@ -1,4 +1,4 @@
-void choose_city();
+void choose_starting_point();
 
 void exhaustive_search();
 

@@ -7,7 +7,7 @@ void shuffle() {
     init_path();
     srand(time(NULL));
 
-    for (int i=0; i<NB_CITIES-1; i++) swap_path(rand() % (NB_CITIES-1), i);
+    for (int i=0; i<NB_POINTS-1; i++) swap_path(rand() % (NB_POINTS-1), i);
     
     copy_path_to_min_path();
 

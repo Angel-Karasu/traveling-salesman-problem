@@ -32,15 +32,15 @@ void merge_sort(couple arr[], int left, int right) {
 void static_sort() {
     init_path();
     
-    couple array[NB_CITIES-1];
-    for (int i=0; i<NB_CITIES-1; i++) {
-        couple c = {path[i], distance_cities[starting_city][path[i]]};
+    couple array[NB_POINTS-1];
+    for (int i=0; i<NB_POINTS-1; i++) {
+        couple c = {path[i], distance_points[starting_point][path[i]]};
         array[i] = c;
     }
     
-    merge_sort(array, 0, NB_CITIES-2);
+    merge_sort(array, 0, NB_POINTS-2);
     
-    for(int i=0; i<NB_CITIES-1; i++) path[i] = array[i].x;
+    for(int i=0; i<NB_POINTS-1; i++) path[i] = array[i].x;
     copy_path_to_min_path();
     show_min_path("Static sort");
 }

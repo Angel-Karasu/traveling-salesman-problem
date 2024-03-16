@@ -1,9 +1,9 @@
 #include "utilities.h"
 
 void permute(int start) {
-    if (start > NB_CITIES-2) copy_path_to_min_path();
+    if (start > NB_POINTS-2) copy_path_to_min_path();
 
-    for (int i = start; i < NB_CITIES-1 - (start < (NB_CITIES-1)/2); i++) {
+    for (int i = start; i < NB_POINTS-1 - (start < (NB_POINTS-1)/2); i++) {
         swap_path(start, i);
         permute(start+1);
         swap_path(start, i);

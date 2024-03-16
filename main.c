@@ -1,7 +1,7 @@
 #include "src/methods.h"
 
 int main() {
-    choose_city();
+    choose_starting_point();
 
     exhaustive_search();
     greedy_distance_remaining();

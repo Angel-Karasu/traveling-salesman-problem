@@ -1,8 +1,8 @@
-#define NB_CITIES 5
+#define NB_POINTS 5
 
-extern char const *city_names[];
-extern int const distance_cities[NB_CITIES][NB_CITIES];
-extern int starting_city;
+extern char const *points[];
+extern int const distance_points[NB_POINTS][NB_POINTS];
+extern int starting_point;
 
-extern int min_path[NB_CITIES];
-extern int path[NB_CITIES-1];
+extern int min_path[NB_POINTS];
+extern int path[NB_POINTS-1];
