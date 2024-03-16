@@ -12,12 +12,12 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
 ## Approaches
 
 1. Exact algorithms:
-  - **Exhaustive search:** Test all possibilties, `complexity = O(n*n!)`
+    - **Exhaustive search:** Test all possibilties, $complexity = O((n+1)!)$
 2. Approximate algorithms:
-  - **Greedy distance remaining:** Choose the city closest to the remaining cities, `complexity = O(n²)`
-  - **Greedy proximity:** Choose the city closest to your current one, `complexity = O(n²)`
-  - **Random:** Shuffle the list of cities and return it as a probable solution, `complexity = O(n)`
-  - **Static sorting:** Sort cities by distance from starting city, using merge sort, `complexity = O(n*log(n))`
+    - **Greedy distance remaining:** Choose the city closest to the remaining cities, $complexity = O(n²)$
+    - **Greedy proximity:** Choose the city closest to your current one, $complexity = O(n²)$
+    - **Random:** Shuffle the list of cities and return it as a probable solution, $complexity = O(n)$
+    - **Static sorting:** Sort cities by distance from starting city, using merge sort, $complexity = O(nlog(n))$
 
 *n := number of cities to travel (number total of cities - 1)*
     
