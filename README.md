@@ -21,15 +21,19 @@ The [Traveling Salesman Problem (TSP)](https://en.wikipedia.org/wiki/Travelling_
 
 *n := number of cities to travel (number total of cities - 1)*
     
-## How to test
+## Installation
 
-If you want to test the project, clone this repository and compile it using make command
+Clone this repository and compile it using make command
 ```shell
 git clone https://github.com/Angel-Karasu/traveling-salesman-problem.git;
 cd traveling-salesman-problem;
 make all;
-./path;
 ```
+
+## How to use
+
+1. Run the exec file : `path`
+2. Choose the starting point
 
 ## To do
 
