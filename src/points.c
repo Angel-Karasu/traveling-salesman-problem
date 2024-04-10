@@ -17,9 +17,9 @@ int starting_point;
 void choose_starting_point() {
     do {
         starting_point = 0;
-        printf("Cities :\n");
+        printf("Points :\n");
         for (int i=0; i<NB_POINTS; i++) printf("  %d. %s\n", i, points[i]);
-        printf("Choose the city to start with number: ");
+        printf("Choose the point to start with number: ");
         scanf("%d", &starting_point);
     } while (starting_point < 0 || starting_point >= NB_POINTS);
     printf("\nYou start in %s\n\n", points[starting_point]);
