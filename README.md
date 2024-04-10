@@ -32,7 +32,7 @@ make all;
 
 ## How to use
 
-1. Run the exec file : `path`
+1. Run the executable file : `path`
 2. Choose the starting point
 
 ## To do
